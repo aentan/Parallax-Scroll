@@ -1,8 +1,10 @@
 # パララックス Parallax-Scroll
 
-Parallax Scroll is a jQuery plugin to create elements with background images that behaves as if their `background-attachment` property is between `scroll` and `fixed`, similar to the parallax scrolling effect you see on Spotify and is loosely based on Peder Andreas Nielsen&rsquo;s [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll).
+[See Demo](http://parallax-scroll.aenism.com).
 
-It makes clever use of `background-position` and `background-size` properties instead of CSS3 tranforms and supports IE9 and above. It also runs smoothly on mobile devices due to its simplicity.
+Parallax-Scroll is a jQuery plugin to create elements with background images that behaves as if their `background-attachment` property is between `scroll` and `fixed`, similar to the parallax scrolling effect you see on Spotify and is loosely based on Peder Andreas Nielsen&rsquo;s [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll).
+
+It makes clever use of `background-position` and `background-size` properties instead of CSS3 tranforms. It thus runs smoothly on mobile devices.
 
 ## Markup
 
@@ -56,9 +58,6 @@ The nicest thing about using CSS background images is that by adding some media 
   .bg-holder#pic2 {
     background-image: url('../img/pic2_bigger.jpg');
   }
-  .bg-holder#pic3 {
-    background-image: url('../img/pic3_bigger.jpg');
-  }
 }
 ```
 
@@ -90,7 +89,7 @@ Most likely requires a jQuery of lower version than other plugins you use. If in
 
 The only limitation is that the `background-size` property is not supported by IE&lt;9 so this plugin would not work on that ancient browser.
 
-This plugin is loosely based on Peder Andreas Nielsen&rsquo;s [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll). Beautiful tilt-shift photos by [rolohauck](https://www.flickr.com/photos/rolohauck/).
+This plugin is loosely based on Peder Andreas Nielsen&rsquo;s [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll). Beautiful tilt-shift photos in the demo by [rolohauck](https://www.flickr.com/photos/rolohauck/).
 
 ===
 
