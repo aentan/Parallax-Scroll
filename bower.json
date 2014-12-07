@@ -1,6 +1,6 @@
 {
   "name": "parallax-scroll",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "homepage": "https://github.com/aentan/Parallax-Scroll",
   "authors": [
     "Aen Tan <hello@aentan.com>"
@@ -12,8 +12,7 @@
     "parallax",
     "scroll"
   ],
-  "license": "MIT",
-  "private": true,
+  "license": "MIT",\
   "ignore": [
     "**/.*",
     "node_modules",
