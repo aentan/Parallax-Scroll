@@ -1,7 +1,7 @@
 $(function() {
   
-  $('.bg-holder').parallaxScroll({
-    friction: 0.4
+  $(".bg-holder").parallaxScroll({
+    friction: 0.6
   });
   
 });

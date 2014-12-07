@@ -1,11 +1,3 @@
-/*
- *  Parallax-Scroll - v0.2.0
- *  jQuery plugin for background-attachment: scroll with friction, similar to the parallax scrolling effect on Spotify.
- *  http://parallax-scroll.aenism.com
- *
- *  Made by Aen Tan
- *  Under MIT License
- */
 ;(function (root, factory) {
     if (typeof define === "function" && define.amd) {
         // AMD. Register as an anonymous module.

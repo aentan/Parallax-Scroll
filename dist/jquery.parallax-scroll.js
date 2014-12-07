@@ -1,16 +1,15 @@
-/**
- * Parallax Scroll - jQuery plugin
- * Author: Aen
- * Created date: 12.06.14
- * Updated date: 12.06.14
- * Version: 0.1.0
- * Licensed under the MIT license
+/*
+ *  Parallax-Scroll - v0.2.0
+ *  jQuery plugin for background-attachment: scroll with friction, similar to the parallax scrolling effect on Spotify.
+ *  http://parallax-scroll.aenism.com
+ *
+ *  Made by Aen Tan
+ *  Under MIT License
  */
-;
-(function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
+;(function (root, factory) {
+    if (typeof define === "function" && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
+        define(["jquery"], factory);
     } else {
         // Browser globals
         factory(root.jQuery);
@@ -25,7 +24,7 @@
         $win = $(window),
         lastTickTime = 0;
     
-    window.requestAnimationFrame = function (callback, element) {
+    window.requestAnimationFrame = function (callback) {
       var currTime = new Date().getTime();
       var timeToCall = Math.max(0, 5 - (currTime - lastTickTime));
       var id = window.setTimeout(function () {
@@ -45,7 +44,7 @@
         },
         _initStyles: function () {
           this.$background.css({
-            'background-attachment': 'scroll'
+            "background-attachment": "scroll"
           });
         },
         _visibleInViewport: function () {
@@ -55,7 +54,7 @@
       	},
         _bindEvents: function () {
           var self = this;
-          $win.on('load scroll resize', function (evt) {
+          $win.on("load scroll resize", function () {
             self._requestTick();
           });
         },
@@ -72,8 +71,8 @@
           if (this._visibleInViewport()) {
             var winW = $win.width();
             var winH = $win.height();
-            var imgW = this.$background.data('width');
-            var imgH = this.$background.data('height');
+            var imgW = this.$background.data("width");
+            var imgH = this.$background.data("height");
             var imgA = imgW / imgH;
             var bgW = this.$background.width();
             var bgH = this.$background.height();
@@ -88,14 +87,13 @@
             var xf1 = bgScrollTop * (winH / distToMove);
             var xf2 = bgScrollTop / winH;
             var centerOffsetY = (winH - bgH) / 2;
-            centerOffsetY = revA ? centerOffsetY * xf2 : centerOffsetY
+            centerOffsetY = revA ? centerOffsetY * xf2 : centerOffsetY;
             var bgFriction = revA? this.settings.friction * (bgA * 2) : this.settings.friction * bgA;
-            var bgSize = revA ? 'auto ' + winH + 'px' : winW + 'px auto';
+            var bgSize = revA ? "auto " + winH + "px" : winW + "px auto";
             var bgPos = (xf1 * bgFriction) - centerOffsetY;
-            // this.$background.html('bgH:' + bgH + ',  bgScrollTop:' + bgScrollTop + ',  bgPos:' + bgPos + ', xf2:' + xf2 + ', revA:' + revA + ', imgA:' + imgA + ', bgA:' + bgA);
             this.$background.css({
-              'background-size': bgSize,
-              'background-position': '50% ' + bgPos + 'px'
+              "background-size": bgSize,
+              "background-position": "50% " + bgPos + "px"
             });
           }
           this.ticking = false;
