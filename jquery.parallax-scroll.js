@@ -35,7 +35,7 @@
       return id;
     };
 
-    ParallaxScroll = function (background, options) {
+    parallaxScroll = function (background, options) {
       return {
         init: function () {
           this.$background = $(background);
