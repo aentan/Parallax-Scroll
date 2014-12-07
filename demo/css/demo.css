@@ -7,8 +7,15 @@ body {
 }
 
 body {
-  font-size: 16px;
-  line-height: 1.75;
+  font-family: "lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.778;
+  color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
 }
 
 a {
@@ -84,7 +91,7 @@ section .content {
 
 .content h2 {
   margin: 0 0 16px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 section p {
@@ -115,9 +122,8 @@ section .gist-meta {
 
 .content code {
   font-family: monospace, serif;
-  font-size: 14px;
+  font-size: 16px;
   color: gray;
-  vertical-align: 1px;
   white-space: nowrap;
 }
 
