@@ -58,6 +58,18 @@ a:hover {
   background-image: url('../img/pic3.jpg');
 }
 
+@media (min-width: 768px) {
+  .bg-holder#pic1 {
+    background-image: url('../img/pic1_bigger.jpg');
+  }
+  .bg-holder#pic2 {
+    background-image: url('../img/pic2_bigger.jpg');
+  }
+  .bg-holder#pic3 {
+    background-image: url('../img/pic3_bigger.jpg');
+  }
+}
+
 
 /* Content Sections */
 

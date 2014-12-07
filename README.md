@@ -46,6 +46,22 @@ body {
 }
 ```
 
+The nicest thing about using CSS background images is that by adding some media queries we can do responsive image sizes.
+
+```
+@media (min-width: 768px) {
+  .bg-holder#pic1 {
+    background-image: url('../img/pic1_bigger.jpg');
+  }
+  .bg-holder#pic2 {
+    background-image: url('../img/pic2_bigger.jpg');
+  }
+  .bg-holder#pic3 {
+    background-image: url('../img/pic3_bigger.jpg');
+  }
+}
+```
+
 ## Initialization &amp; Options
 
 To initialize the plugin, call the `parallaxScroll` method on your background elements.
