@@ -22,13 +22,17 @@
       <div id="intro" class="content">
         <h1>パララックス</h1>
         <p>Parallax Scroll</p>
+        <div id="cta">
+          <a href="https://github.com/aentan/Parallax-Scroll/archive/master.zip" class="cta">Download</a>
+          <a href="https://github.com/aentan/Parallax-Scroll" class="cta">View on GitHub</a>
+        </div>
       </div>
     </div>
     
     <section>
       <div class="content">   
         <p>Parallax Scroll is a jQuery plugin to create elements with background images that behaves as if their <code>background-attachment</code> property is between <code>scroll</code> and <code>fixed</code>, similar to the parallax scrolling effect you see on Spotify and is loosely based on Peder Andreas Nielsen&rsquo;s <a href="https://github.com/pederan/Parallax-ImageScroll" target="_blank">Parallax ImageScroll</a>.</p>
-        <p>It makes clever use of <code>background-position</code> and <code>background-size</code> properties instead of CSS3 tranforms and supports IE9 and above. It also runs smoothly on mobile devices due to its simplicity.</p>
+        <p>It makes clever use of <code>background-position</code> and <code>background-size</code> properties instead of CSS3 tranforms. It thus runs smoothly on mobile devices.</p>
       </div>
     </section>
     
@@ -60,13 +64,35 @@
       <div class="content">
         <p>To initialize the plugin, call the <code>parallaxScroll</code> method on your background elements.</p>
         <script src="https://gist.github.com/aentan/cdfee1f0ee4451cece28.js"></script>
-        <p>The plugin accepts one option &ndash; friction. It should be a float value that is more than 0 and less than 1. A value of 1 causes the background to behave as it has <code>background-attachment: scroll</code> (which is useless). A value of 1 (maximum friction) is the same as <code>background-attachment: fixed</code>.</p>
+        <p>The plugin accepts one option &ndash; friction. It should be a float value that is more than 0 and less than 1. 0 causes the background to behave as it has <code>background-attachment: scroll</code> (which is useless). 1 (maximum friction) is the same as <code>background-attachment: fixed</code>. A value greater than 1 will cause the background to scroll in reverse!</p>
+        <p>Other features available in Pederan&rsquo;s plugin such as <code>holderMinHeight</code> and <code>coverRatio</code> can be achieved purely with CSS and should be. The fallback option to turn off parallax in mobile devices is unnecessary because this plugin works smoothly on mobile devices.</p>
       </div>
     </section>
     
+    <hr>
+    
+    <section>
+      <div class="content">
+        <h2>Notes</h2>
+        <p>Most likely requires a jQuery of lower version than other plugins you use. If in doubt I recommend 1.8.0 or higher.</p>
+        <p>The only limitation is that the <code>background-size</code> property is not supported by IE&lt;9 so this plugin would not work on that ancient browser.</p>
+        <p>This plugin is loosely based on Peder Andreas Nielsen&rsquo;s <a href="https://github.com/pederan/Parallax-ImageScroll" target="_blank">Parallax ImageScroll</a>. Beautiful tilt-shift photos by <a href="https://www.flickr.com/photos/rolohauck/" target="_blank">rolohauck</a>.</p>
+      </div>
+    </section>
+    
+    <hr>
+    
     <section id="footer">
       <div class="content">
-        <p>Photos by <a href="https://www.flickr.com/photos/rolohauck/" target="_blank">rolohauck</a>.</p>
+        <p>Made by <a href="http://aenism.com/" target="_blank">Aen</a>. Code licensed under MIT.</p>
+        <ul id="social">
+          <li><a class="github-button" href="https://github.com/aentan/Parallax-Scroll" data-count-href="/aentan/Parallax-Scroll/stargazers" data-count-api="/repos/aentan/Parallax-Scroll#stargazers_count">Star</a></li>
+          <li><a class="github-button" href="https://github.com/aentan/Parallax-Scroll" data-count-href="/aentan/Parallax-Scroll/network" data-count-api="/repos/aentan/Parallax-Scroll#forks_count">Fork</a></li>
+          <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="Aen" data-show-count="false">Tweet</a></li>
+          <li><a href="https://twitter.com/Aen" class="twitter-follow-button" data-show-count="true">Follow @Aen</a></li>
+        </ul>
+        <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       </div>
     </section>
 

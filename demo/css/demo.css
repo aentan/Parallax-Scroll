@@ -11,6 +11,15 @@ body {
   line-height: 1.75;
 }
 
+a {
+  color: #228B22;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 
 /* Backgrounds */
 
@@ -74,6 +83,12 @@ section p + p {
   text-indent: 2em;
 }
 
+section + hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  height: 0;
+}
+
 section .gist {
   margin: 24px 0;
 }
@@ -108,9 +123,39 @@ section .gist-meta {
   font-size: 24px;
 }
 
+#cta {
+  margin-top: 32px;
+}
+
+.cta {
+  color: #fff;
+  font-size: 16px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 0 4px;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background-color: white;
+  color: #228B22;
+  text-decoration: none;
+}
+
 
 /* Footer */
 
 #footer {
-  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+#social {
+  margin: 16px;
+  list-style: none;
+}
+
+#social li {
+  display: inline-block;
+  margin: 8px;
 }

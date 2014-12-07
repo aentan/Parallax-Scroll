@@ -1,4 +1,4 @@
-パララックス Parallax-Scroll
+# パララックス Parallax-Scroll
 ===============
 
 Parallax Scroll is a jQuery plugin to create elements with background images that behaves as if their `background-attachment` property is between `scroll` and `fixed`, similar to the parallax scrolling effect you see on Spotify and is loosely based on Peder Andreas Nielsen&rsquo;s [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll).
@@ -57,4 +57,6 @@ $('.bg-holder').parallaxScroll({
 });
 ```
 
-The plugin accepts one option &ndash; friction. It should be a float value that is more than 0 and less than 1. A value of 1 causes the background to behave as it has `background-attachment: scroll` (which is useless). A value of 1 (maximum friction) is the same as `background-attachment: fixed`.
+The plugin accepts one option &ndash; friction. It should be a float value that is more than 0 and less than 1. 0 causes the background to behave as it has `background-attachment: scroll`. 1 (maximum friction) is the same as `background-attachment: fixed`. A value greater than 1 will cause the background to scroll in reverse!
+
+
