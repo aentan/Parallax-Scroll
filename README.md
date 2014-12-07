@@ -60,6 +60,14 @@ The plugin accepts one option &ndash; friction. It should be a float value that 
 
 Other features available in Pederan&rsquo;s plugin such as `holderMinHeight` and `coverRatio` can be achieved purely with CSS and should be. The fallback option to turn off parallax in mobile devices is unnecessary because this plugin works smoothly on mobile devices.
 
+## Installation
+
+Install using bower
+
+```
+bower install parallax-scroll
+````
+
 ## Notes
 
 Most likely requires a jQuery of lower version than other plugins you use. If in doubt I recommend 1.8.0 or higher.
