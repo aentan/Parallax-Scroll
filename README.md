@@ -1,6 +1,6 @@
 # パララックス Parallax-Scroll
 
-[![Build Status](https://travis-ci.org/aentan/Parallax-Scroll.svg?style=flat)](https://travis-ci.org/aentan/Parallax-Scroll)
+[![Build Status](https://img.shields.io/travis/aentan/Parallax-Scroll.svg?style=flat)](https://travis-ci.org/aentan/Parallax-Scroll)
 
 [See Demo](http://parallax-scroll.aenism.com).
 
