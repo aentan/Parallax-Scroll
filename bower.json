@@ -12,7 +12,7 @@
     "parallax",
     "scroll"
   ],
-  "license": "MIT",\
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
