@@ -59,4 +59,14 @@ $('.bg-holder').parallaxScroll({
 
 The plugin accepts one option &ndash; friction. It should be a float value that is more than 0 and less than 1. 0 causes the background to behave as it has `background-attachment: scroll`. 1 (maximum friction) is the same as `background-attachment: fixed`. A value greater than 1 will cause the background to scroll in reverse!
 
+Other features available in Pederan&rsquo;s plugin such as `holderMinHeight` and `coverRatio` can be achieved purely with CSS and should be. The fallback option to turn off parallax in mobile devices is unnecessary because this plugin works smoothly on mobile devices.
+
+## Notes
+
+Most likely requires a jQuery of lower version than other plugins you use. If in doubt I recommend 1.8.0 or higher.
+
+The only limitation is that the `background-size` property is not supported by IE&lt;9 so this plugin would not work on that ancient browser.
+
+This plugin is loosely based on Peder Andreas Nielsen&rsquo;s [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll). Beautiful tilt-shift photos by [rolohauck](https://www.flickr.com/photos/rolohauck/).
+
 
