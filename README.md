@@ -48,7 +48,7 @@ body {
 
 The nicest thing about using CSS background images is that by adding some media queries we can do responsive image sizes.
 
-```
+```css
 @media (min-width: 768px) {
   .bg-holder#pic1 {
     background-image: url('../img/pic1_bigger.jpg');
