@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Parallax Scroll by Aen</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="bg-holder" id="pic1" data-width="1024" data-height="768">
+      <div id="intro" class="content">
+        <h1>パララックス</h1>
+        <p>Parallax Scroll</p>
+      </div>
+    </div>
+    
+    <section>
+      <div class="content">   
+        <p>Parallax Scroll is a jQuery plugin to create elements with background images that behaves as if their <code>background-attachment</code> property is between <code>scroll</code> and <code>fixed</code>, similar to the parallax scrolling effect you see on Spotify and is loosely based on Peder Andreas Nielsen&rsquo;s <a href="https://github.com/pederan/Parallax-ImageScroll" target="_blank">Parallax ImageScroll</a>.</p>
+        <p>It makes clever use of <code>background-position</code> and <code>background-size</code> properties instead of CSS3 tranforms and supports IE9 and above. It also runs smoothly on mobile devices due to its simplicity.</p>
+      </div>
+    </section>
+    
+    <div class="bg-holder" id="pic2" data-width="1024" data-height="768">
+      <div class="content">
+        <h2>マークアップ</h2>
+        <p>Markup</p>
+      </div>
+    </div>
+    
+    <section>
+      <div class="content">
+        <p>The basic markup consists of content sections placed between background holders.</p>
+        <p>The width and height of the images must be supplied via data attributes. They are required for the calculation of aspect ratios.</p>
+        <script src="https://gist.github.com/aentan/88b746bd3e861519b3ed.js"></script>
+        <p>Add background images to the <code>.bg-holder</code> elements with the following styles.</p>
+        <script src="https://gist.github.com/aentan/ec919cd0292a141cba08.js"></script>
+      </div>
+    </section>
+    
+    <div class="bg-holder" id="pic3" data-width="1600" data-height="1200">
+      <div class="content">
+        <h2>イニシャライズとオプション</h2>
+        <p>Initialization &amp; Options</p>
+      </div>
+    </div>
+    
+    <section>
+      <div class="content">
+        <p>To initialize the plugin, call the <code>parallaxScroll</code> method on your background elements.</p>
+        <script src="https://gist.github.com/aentan/cdfee1f0ee4451cece28.js"></script>
+        <p>The plugin accepts one option &ndash; friction. It should be a float value that is more than 0 and less than 1. A value of 1 causes the background to behave as it has <code>background-attachment: scroll</code> (which is useless). A value of 1 (maximum friction) is the same as <code>background-attachment: fixed</code>.</p>
+      </div>
+    </section>
+    
+    <section id="footer">
+      <div class="content">
+        <p>Photos by <a href="https://www.flickr.com/photos/rolohauck/" target="_blank">rolohauck</a>.</p>
+      </div>
+    </section>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../jquery.parallax-scroll.js"></script>
+    <script src="js/demo.js"></script>
+  </body>
+</html>

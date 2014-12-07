@@ -1,0 +1,116 @@
+/* Scaffolding */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+
+/* Backgrounds */
+
+.bg-holder {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #fff;
+}
+
+.bg-holder .content {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.bg-holder .content h2 {
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.bg-holder#pic1 {
+  background-image: url('../img/pic1.jpg');
+}
+
+.bg-holder#pic2 {
+  background-image: url('../img/pic2.jpg');
+}
+
+.bg-holder#pic3 {
+  background-image: url('../img/pic3.jpg');
+}
+
+
+/* Content Sections */
+
+section {
+  padding: 48px;
+}
+
+section .content {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.content h2 {
+  margin: 0 0 16px;
+  font-size: 16px;
+}
+
+section p {
+  margin: 0;
+}
+
+section p + p {
+  text-indent: 2em;
+}
+
+section .gist {
+  margin: 24px 0;
+}
+
+section .gist .gist-data {
+  border-bottom: 0;
+}
+
+section .gist-meta {
+  display: none;
+}
+
+.content code {
+  font-family: monospace, serif;
+  font-size: 14px;
+  color: gray;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+
+/* Intro */
+
+#intro h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.5;
+}
+
+#intro p {
+  margin: 0;
+  font-size: 24px;
+}
+
+
+/* Footer */
+
+#footer {
+  border-top: 1px solid #ccc;
+}
