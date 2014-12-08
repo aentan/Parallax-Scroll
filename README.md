@@ -1,5 +1,7 @@
 # パララックス Parallax-Scroll
 
+[![Build Status](https://img.shields.io/travis/aentan/Parallax-Scroll.svg?style=flat)](https://travis-ci.org/aentan/Parallax-Scroll)
+
 [See Demo](http://parallax-scroll.aenism.com).
 
 Parallax-Scroll is a jQuery plugin to create elements with background images that behaves as if their `background-attachment` property is between `scroll` and `fixed`, similar to the parallax scrolling effect you see on Spotify and is loosely based on Peder Andreas Nielsen&rsquo;s [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll).
