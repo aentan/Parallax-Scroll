@@ -1,7 +1,5 @@
 # パララックス Parallax-Scroll
 
-[![Build Status](https://img.shields.io/travis/aentan/Parallax-Scroll.svg?style=flat)](https://travis-ci.org/aentan/Parallax-Scroll)
-
 [See Demo](http://parallax-scroll.aenism.com).
 
 Parallax-Scroll is a jQuery plugin to create elements with background images that behaves as if their `background-attachment` property is between `scroll` and `fixed`, similar to the parallax scrolling effect you see on Spotify and is loosely based on Peder Andreas Nielsen&rsquo;s [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll).
@@ -10,7 +8,7 @@ It makes clever use of `background-position` and `background-size` properties in
 
 ## Markup
 
-The basic markup consists of content sections placed between background holders.
+The basic markup consists of content sections placed between background holders. The width and height of the original images must be supplied via data attributes. They are required for the calculation of aspect ratios.
 
 ```html
 <div id="pic1" class="bg-holder" data-width="1024" data-height="768"></div>
@@ -23,8 +21,6 @@ The basic markup consists of content sections placed between background holders.
   Optional content to be displayed on top of the backgrounds
 </div>
 ```
-
-The width and height of the images must be supplied via data attributes. They are required for the calculation of aspect ratios.
 
 Add background images to the `.bg-holder` elements with the following styles.
 
