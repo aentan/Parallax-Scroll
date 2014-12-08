@@ -4,7 +4,7 @@
 
 Parallax-Scroll is a jQuery plugin to create elements with background images that behaves as if their `background-attachment` property is between `scroll` and `fixed`, similar to the parallax scrolling effect you see on Spotify and is loosely based on Peder Andreas Nielsen&rsquo;s [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll).
 
-It makes clever use of `background-position` and `background-size` properties instead of CSS3 tranforms. It thus runs smoothly on mobile devices.
+It makes clever use of `background-position` and `background-size` properties instead of CSS3 tranforms. It runs buttery smooth and retains the rubber-band scroll behavior in Safari. Works great on mobile too.
 
 ## Markup
 
@@ -48,15 +48,15 @@ body {
 }
 ```
 
-The nicest thing about using CSS background images is that by adding some media queries we can do responsive image sizes.
+The nicest thing about using CSS background images is that by adding media queries we can do responsive image sizes.
 
 ```css
 @media (min-width: 768px) {
   .bg-holder#pic1 {
-    background-image: url('../img/pic1_bigger.jpg');
+    background-image: url('pic1_bigger.jpg');
   }
   .bg-holder#pic2 {
-    background-image: url('../img/pic2_bigger.jpg');
+    background-image: url('pic2_bigger.jpg');
   }
 }
 ```
