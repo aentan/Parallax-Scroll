@@ -11,7 +11,8 @@
 
     var ParallaxScroll,
         defaults = {
-          friction: 0.5
+          friction: 0.5,
+          direction: "vertical"
         },
         $win = $(window),
         lastTickTime = 0;
@@ -72,20 +73,33 @@
             var revA = bgA < imgA;
             var bgScale = bgW / imgW;
             var bgScaledH = imgH * bgScale;
+            var bgScaledW = imgW * bgScale;
             var bgOffsetTop = this.$background.offset().top;
             var winScrollTop = $win.scrollTop();
             var bgScrollTop = winScrollTop - bgOffsetTop;
-            var distToMove = winH + bgScaledH;
-            var xf1 = bgScrollTop * (winH / distToMove);
+            var xDistToMove = winH + bgScaledH;
+            var yDistToMove = winW + bgScaledW;
+            var xf1 = bgScrollTop * (winH / xDistToMove);
             var xf2 = bgScrollTop / winH;
+            var yf1 = bgScrollTop * (winW / yDistToMove);
+            var yf2 = bgScrollTop / winW;
             var centerOffsetY = (winH - bgH) / 2;
             centerOffsetY = revA ? centerOffsetY * xf2 : centerOffsetY;
+            var centerOffsetX = (winW - bgW) / 2;
+            centerOffsetX = revA ? centerOffsetX : centerOffsetX * yf2;
             var bgFriction = revA? this.settings.friction * (bgA * 2) : this.settings.friction * bgA;
-            var bgSize = revA ? "auto " + winH + "px" : winW + "px auto";
-            var bgPos = (xf1 * bgFriction) - centerOffsetY;
+            var bgSize;
+            var bgPos;
+            if (this.settings.direction === "horizontal") {
+              bgSize = revA ? winW + "px auto" : "auto " + winH + "px";
+              bgPos = (centerOffsetX - (yf1 * bgFriction)) + "px 50%";
+            } else {
+              bgSize = revA ? "auto " + winH + "px" : winW + "px auto";
+              bgPos = "50% " + ((xf1 * bgFriction) - centerOffsetY) + "px";
+            }
             this.$background.css({
               "background-size": bgSize,
-              "background-position": "50% " + bgPos + "px"
+              "background-position": bgPos
             });
           }
           this.ticking = false;
