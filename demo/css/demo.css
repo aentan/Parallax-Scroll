@@ -56,7 +56,7 @@ h2 {
 }
 
 .pic1 {
-  background-image: url('../img/pic4.jpg');
+  background-image: url('../img/pic1.jpg');
 }
 
 .pic2 {
@@ -69,7 +69,7 @@ h2 {
 
 @media (min-width: 768px) {
   .pic1 {
-    background-image: url('../img/pic4.jpg');
+    background-image: url('../img/pic1_bigger.jpg');
   }
   .pic2 {
     background-image: url('../img/pic2_bigger.jpg');
