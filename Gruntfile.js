@@ -43,7 +43,7 @@ module.exports = function(grunt) {
         src: ['demo/js/*.js', '!demo/js/*.min.js']
       }
 		},
-    
+
     csslint: {
       options: {
         csslintrc: '.csslintrc'
