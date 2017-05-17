@@ -44,7 +44,7 @@
           var vpHeight  = $win.height();
           var rec = this.$background.get(0).getBoundingClientRect();
           return (rec.top < vpHeight && rec.bottom > 0) || (rec.bottom <= vpHeight && rec.top > vpHeight);
-      	},
+        },
         _bindEvents: function () {
           var self = this;
           $win.on("load scroll resize", function () {
@@ -67,8 +67,8 @@
             var imgW = this.$background.data("width");
             var imgH = this.$background.data("height");
             var imgA = imgW / imgH;
-            var bgW = this.$background.width();
-            var bgH = this.$background.height();
+            var bgW = this.$background.outerWidth();
+            var bgH = this.$background.outerHeight();
             var bgA = bgW / bgH;
             var revA = bgA < imgA;
             var bgScale = bgW / imgW;
@@ -83,9 +83,9 @@
             var xf2 = bgScrollTop / winH;
             var yf1 = bgScrollTop * (winW / yDistToMove);
             var yf2 = bgScrollTop / winW;
-            var centerOffsetY = (winH - bgScaledH) / 2;
+            var centerOffsetY = Math.abs(winH - bgScaledH) / 2;
             centerOffsetY = revA ? centerOffsetY * xf2 : centerOffsetY;
-            var centerOffsetX = (winW - bgScaledW) / 2;
+            var centerOffsetX = Math.abs(winW - bgScaledW) / 2;
             centerOffsetX = revA ? centerOffsetX : centerOffsetX * yf2;
             var bgFriction = revA? this.settings.friction * (bgA * 2) : this.settings.friction * bgA;
             var bgSize;
