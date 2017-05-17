@@ -16,7 +16,7 @@
         },
         $win = $(window),
         lastTickTime = 0;
-    
+
     window.requestAnimationFrame = function (callback) {
       var currTime = new Date().getTime();
       var timeToCall = Math.max(0, 5 - (currTime - lastTickTime));
@@ -83,9 +83,9 @@
             var xf2 = bgScrollTop / winH;
             var yf1 = bgScrollTop * (winW / yDistToMove);
             var yf2 = bgScrollTop / winW;
-            var centerOffsetY = (winH - bgH) / 2;
+            var centerOffsetY = (winH - bgScaledH) / 2;
             centerOffsetY = revA ? centerOffsetY * xf2 : centerOffsetY;
-            var centerOffsetX = (winW - bgW) / 2;
+            var centerOffsetX = (winW - bgScaledW) / 2;
             centerOffsetX = revA ? centerOffsetX : centerOffsetX * yf2;
             var bgFriction = revA? this.settings.friction * (bgA * 2) : this.settings.friction * bgA;
             var bgSize;
